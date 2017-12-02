@@ -1,0 +1,16 @@
+<div class="container">
+    {{title}}
+    
+    <div class="row">
+        <div ng-repeat="phone in favs | filter: search">
+            <div class="col-lg-3 phone">
+                <div class="row">
+                    <img ng-src="{{phone.photo}}" alt="phone image">
+                </div>
+                <div class="row">
+                    <a href="#!/phone/{{phone.id}}">{{phone.brand + ' ' + phone.name}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

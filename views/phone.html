@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <img ng-src="{{phone.photo}}" alt="phone image">
+        </div>
+        <div class="col-lg-6">
+            <p>Marca: {{phone.brand}}</p>
+            <p>Modelo: {{phone.name}}</p>
+            <p>Memoria Interna: {{phone.memory}}</p>
+            <button ng-click="setDesired(phone)">Añadir a Favoritos</button>
+        </div>
+    </div>
+</div>
