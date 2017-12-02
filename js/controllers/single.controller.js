@@ -12,6 +12,7 @@
                
         $scope.phone = {};
         $scope.setDesired = setDesired;
+        $scope.isDesired = isDesired;
 
         activate();
 
@@ -24,6 +25,16 @@
         
         function setDesired(phone){
             PhonesFactory.setDesired(phone);
+        }
+        
+        function isDesired(id){
+            var desired = PhonesFactory.getDesired();
+            
+            for(let i = 0; i < desired.length; i++){
+                if (desired[i].id == id)
+                    return true;
+            }
+            return false;
         }
     }
 })();

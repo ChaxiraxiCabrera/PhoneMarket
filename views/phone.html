@@ -7,7 +7,37 @@
             <p>Marca: {{phone.brand}}</p>
             <p>Modelo: {{phone.name}}</p>
             <p>Memoria Interna: {{phone.memory}}</p>
-            <button ng-click="setDesired(phone)">Añadir a Favoritos</button>
+            <button class="btn btn-default" ng-click="setDesired(phone)" ng-disabled="isDesired(phone.id)">Añadir a Favoritos</button>
         </div>
     </div>
+    <h2>Características</h2>
+    <table class="table">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Marca</th>
+                    <td>{{phone.brand}}</td>
+                </tr>
+                <tr>
+                    <th>Modelo</th>
+                    <td>{{phone.name}}</td>
+                </tr>
+                <tr>
+                    <th>Memoria</th>
+                    <td>{{phone.memory}}</td>
+                </tr>
+                <tr>
+                    <th>Pantalla</th>
+                    <td>{{phone.screen}}</td>
+                </tr>
+                <tr>
+                    <th>Bluetooth</th>
+                    <td>{{phone.bluetooth}}</td>
+                </tr>
+                <tr>
+                    <th>OS</th>
+                    <td>{{phone.os}}</td>
+                </tr>
+            </tbody>
+        </table>
 </div>
